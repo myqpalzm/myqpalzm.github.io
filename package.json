@@ -20,6 +20,9 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^1.0.0"
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "sirv-cli": "^1.0.0",
+    "svelte-fa": "^2.4.0"
   }
 }

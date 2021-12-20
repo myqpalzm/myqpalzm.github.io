@@ -1,5 +1,9 @@
 <script>
 	import { fade } from 'svelte/transition'
+	import Fa from 'svelte-fa'
+	import { faGithub } from '@fortawesome/free-brands-svg-icons'
+	import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+	import { faItchIo } from '@fortawesome/free-brands-svg-icons'
 
 	import Home from "./Home.svelte"
 	import Projects from "./Projects.svelte"
@@ -31,13 +35,19 @@
 
 	{#key navCounter}
 		{#if navCounter === 0}
-			<div in:fade><Home/></div>
+			<div in:fade><Home /></div>
 		{:else if navCounter === 1}
-			<div in:fade><Projects/></div>
+			<div in:fade><Projects /></div>
 		{:else}
-			<div in:fade><About/></div>
+			<div in:fade><About /></div>
 		{/if}
 	{/key}
+
+	<footer>
+		<a href="https://github.com/myqpalzm"><Fa icon={faGithub} size="2x"/></a>
+		<a href="https://www.linkedin.com/in/jonathan-franzeli-b15094114/"><Fa icon={faLinkedin} size="2x"/></a>
+		<a href="https://myqpalzm.itch.io/"><Fa icon={faItchIo} size="2x"/></a>
+	</footer>
 </main>
 
 <style>
@@ -48,5 +58,15 @@
 
 	ul#navbar li {
 		display : inline-block;
+	}
+
+	footer {
+		margin: 5em 0;
+		text-align: center;
+		border: none;
+	}
+
+	footer a {
+		margin: 0 0.5em;
 	}
 </style>
