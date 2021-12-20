@@ -9,7 +9,7 @@
 	import Projects from "./Projects.svelte"
 	import About from "./About.svelte"
 
-	let navCounter = 1
+	let navCounter = 0
 </script>
 
 <main>
@@ -44,9 +44,9 @@
 	{/key}
 
 	<footer>
-		<a href="https://github.com/myqpalzm"><Fa icon={faGithub} size="2x"/></a>
-		<a href="https://www.linkedin.com/in/jonathan-franzeli-b15094114/"><Fa icon={faLinkedin} size="2x"/></a>
-		<a href="https://myqpalzm.itch.io/"><Fa icon={faItchIo} size="2x"/></a>
+		<a href="https://github.com/myqpalzm" target=”_blank”><Fa icon={faGithub} size="2x"/></a>
+		<a href="https://www.linkedin.com/in/jonathan-franzeli-b15094114/" target=”_blank”><Fa icon={faLinkedin} size="2x"/></a>
+		<a href="https://myqpalzm.itch.io/" target=”_blank”><Fa icon={faItchIo} size="2x"/></a>
 	</footer>
 </main>
 
