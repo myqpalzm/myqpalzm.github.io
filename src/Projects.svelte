@@ -5,26 +5,30 @@
             title: 'SushiPay',
             desc: 'This is a description',
             myRole: 'I design the logo',
-            type: 'Prototype Online Restaurant',
+            type: 'Online Restaurant Order',
             link: 'https://sushipay-pemweb.xyz/',
-            src: 'https://clarkpaintings.com/wp-content/uploads/2014/12/Pencil_Cat_3.jpg'
+            logo: './image/sushipay.svg',
+            preview: './image/sushipay-preview.png'
         },
         {
             id: 2,
             title: 'ConsolePay',
             desc: 'This is a description',
             myRole: 'I design the logo',
-            type: 'Prototype Game Console Rental',
+            type: 'Online Game Console Rental',
             link: 'http://console.sushipay-pemweb.xyz/',
-            src: 'http://console.sushipay-pemweb.xyz/'
+            logo: './image/consolepay.svg',
+            preview: './image/consolepay-preview.png'
         },
         {
             id: 3,
             title: 'Paycation',
             desc: 'This is a description',
             myRole: 'I design the logo',
-            type: 'Prototype ',
-            src: 'https://hotel.sushipay-pemweb.xyz/'
+            type: 'Online Hotel Booking',
+            link: 'http://hotel.sushipay-pemweb.xyz/',
+            logo: './image/paycation.svg',
+            preview: './image/paycation-preview.png'
         },
     ]
 
@@ -35,52 +39,72 @@
             desc: 'Hendry Run is a 3D platformer.',
             myRole: 'I design the logo',
             type: '3D Platformer',
-            src: 'https://umn.itch.io/hendry-run'
-        }
+            link: 'https://umn.itch.io/hendry-run',
+            logo: './image/hendryrun.png'
+        },
     ]
 </script>
 
 <main>
     <h1>Projects:</h1>
 
-    {#each projectList as { id, title, desc, myRole, type, src }}
+    {#each projectList as { id, title, desc, myRole, type, link, logo, preview }}
     <div class="container">
         <div class="projectDesc">
-            <h1>{title}</h1>
-            <h5>{type}</h5>
+            <img src={logo} alt={title}>
+            <br/>
+            <h5><i>{type}</i></h5>
             <p>{desc}</p>
+            <a href={link} target=”_blank”>Visit website</a>
         </div>
         <div class="projectImage">
-            <img {src} alt="">
+            <img src={preview} alt="">
         </div>
     </div>
     {/each}
 </main>
 
 <style>
+    h1 {
+        margin-bottom: 3em;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .projectImage {
+        box-shadow: rgba(0, 0, 0, 0.24) 0em 0.3em 0.8em;
+    }
+
     @media (min-width: 641px) {
         .container {
             display: grid;
             align-items: center;
-			justify-items: center;
-            grid-template-columns: repeat(4, 1fr);
+			justify-items: left;
+            margin-bottom: 3em;
+            grid-template-columns: repeat(5, 1fr);
             grid-template-rows: 1fr;
             grid-template-areas:
-                "projectDesc projectDesc projectDesc projectImage";
+                "projectDesc projectDesc projectImage projectImage projectImage";
         }
 
         .projectDesc {
-            grid-area: 1 / 1 / 2 / 4;
+            grid-area: 1 / 1 / 2 / 3;
         }
 
         .projectImage {
-            grid-area: 1 / 4 / 2 / 5;
+            grid-area: 1 / 3 / 2 / 6;
         }
     }
 
     @media (min-width: 0px) and (max-width: 640px) {
 		.container {
 			display: grid;
+            align-items: center;
+			justify-items: left;
+            margin-bottom: 3em;
 			grid-template-columns: repeat(1, 1fr);
 			grid-template-rows: repeat(2, 1fr);
 			grid-template-areas:
