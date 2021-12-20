@@ -1,9 +1,11 @@
 <script>
 	import { fade } from 'svelte/transition'
+
 	import Fa from 'svelte-fa'
 	import { faGithub } from '@fortawesome/free-brands-svg-icons'
 	import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 	import { faItchIo } from '@fortawesome/free-brands-svg-icons'
+	import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons'
 
 	import Home from "./Home.svelte"
 	import Projects from "./Projects.svelte"
@@ -44,15 +46,16 @@
 	{/key}
 
 	<footer>
-		<a href="https://github.com/myqpalzm" target=”_blank”><Fa icon={faGithub} size="2x"/></a>
-		<a href="https://www.linkedin.com/in/jonathan-franzeli-b15094114/" target=”_blank”><Fa icon={faLinkedin} size="2x"/></a>
-		<a href="https://myqpalzm.itch.io/" target=”_blank”><Fa icon={faItchIo} size="2x"/></a>
+		<a href="https://github.com/myqpalzm" title="Github" target="_blank"><Fa icon={faGithub} size="2x"/></a>
+		<a href="https://www.linkedin.com/in/jonathan-franzeli-b15094114/" title="Linkedin" target="_blank"><Fa icon={faLinkedin} size="2x"/></a>
+		<a href="https://myqpalzm.itch.io/" title="Itch.io" target="_blank"><Fa icon={faItchIo} size="2x"/></a>
+		<a href="mailto:jonathan.franzeli@student.umn.ac.id" title="Email"><Fa icon={faEnvelopeOpenText} size="1.9x"/></a>
 	</footer>
 </main>
 
 <style>
 	main {
-		padding: 0 10em;
+		padding: 0 5em;
 		margin: 0 auto;
 	}
 

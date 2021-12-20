@@ -3,8 +3,8 @@
         {
             id: 1,
             title: 'SushiPay',
-            desc: 'This is a description',
-            myRole: 'I design the logo',
+            desc: 'This is a description.',
+            myRole: 'I designed the logo.',
             type: 'Online Restaurant Order',
             link: 'https://sushipay-pemweb.xyz/',
             logo: './image/sushipay.svg',
@@ -13,8 +13,8 @@
         {
             id: 2,
             title: 'ConsolePay',
-            desc: 'This is a description',
-            myRole: 'I design the logo',
+            desc: 'This too is a description',
+            myRole: 'I also designed the logo.',
             type: 'Online Game Console Rental',
             link: 'http://console.sushipay-pemweb.xyz/',
             logo: './image/consolepay.svg',
@@ -23,8 +23,8 @@
         {
             id: 3,
             title: 'Paycation',
-            desc: 'This is a description',
-            myRole: 'I design the logo',
+            desc: 'Hi, I\'m a description.',
+            myRole: 'I designed this logo too.',
             type: 'Online Hotel Booking',
             link: 'http://hotel.sushipay-pemweb.xyz/',
             logo: './image/paycation.svg',
@@ -37,16 +37,17 @@
             id: 1,
             title: 'Hendry Run',
             desc: 'Hendry Run is a 3D platformer.',
-            myRole: 'I design the logo',
+            myRole: 'This logo too.',
             type: '3D Platformer',
             link: 'https://umn.itch.io/hendry-run',
-            logo: './image/hendryrun.png'
+            logo: './image/hendryrun.svg',
+            preview: './image/hendryrun-preview.png'
         },
     ]
 </script>
 
 <main>
-    <h1>Projects:</h1>
+    <h1>Front-End Projects:</h1>
 
     {#each projectList as { id, title, desc, myRole, type, link, logo, preview }}
     <div class="container">
@@ -55,10 +56,29 @@
             <br/>
             <h5><i>{type}</i></h5>
             <p>{desc}</p>
+            <p>{myRole}</p>
             <a href={link} target=”_blank”>Visit website</a>
         </div>
         <div class="projectImage">
-            <img src={preview} alt="">
+            <img class="previewImage" src={preview} alt="">
+        </div>
+    </div>
+    {/each}
+
+    <h1>Game Project(s):</h1>
+
+    {#each gameList as { id, title, desc, myRole, type, link, logo, preview }}
+    <div class="container">
+        <div class="projectDesc">
+            <img src={logo} alt={title}>
+            <br/>
+            <h5><i>{type}</i></h5>
+            <p>{desc}</p>
+            <p>{myRole}</p>
+            <a href={link} target=”_blank”>Visit website</a>
+        </div>
+        <div class="projectImage">
+            <img class="previewImage" src={preview} alt="">
         </div>
     </div>
     {/each}
@@ -71,11 +91,11 @@
 
     img {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 
-    .projectImage {
-        box-shadow: rgba(0, 0, 0, 0.24) 0em 0.3em 0.8em;
+    .previewImage {
+        box-shadow: rgba(0, 0, 0, 0.24) 0 0.3em 0.8em;
     }
 
     @media (min-width: 641px) {
