@@ -83,25 +83,51 @@
 		margin: 0 auto;
 	}
 
-	#navbar {
-		display: grid;
-		align-items: center;
-		justify-items: center;
-		padding-top: 1em;
-		margin-bottom: 6em;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: 1fr;
-		grid-template-areas:
-			"nav nav nav nav darkBtn";
-		text-align: center;
+	@media (min-width: 641px) {
+		#navbar {
+			display: grid;
+			align-items: center;
+			justify-items: center;
+			padding-top: 1em;
+			margin-bottom: 6em;
+			grid-template-columns: repeat(10, 1fr);
+			grid-template-rows: 1fr;
+			grid-template-areas:
+				"nav nav nav nav nav nav nav nav nav darkBtn";
+			text-align: center;
+		}
+
+		.nav {
+			grid-area: 1 / 1 / 2 / 11;
+		}
+
+		.darkBtn {
+			grid-area: 1 / 10 / 2 / 11;
+		}
 	}
 
-	.nav {
-		grid-area: 1 / 1 / 2 / 6;
-	}
+	@media (min-width: 0px) and (max-width: 640px) {
+		#navbar {
+			display: grid;
+			align-items: center;
+			justify-items: center;
+			padding-top: 1em;
+			margin-bottom: 6em;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-areas:
+				"nav"
+				"darkBtn";
+			text-align: center;
+		}
 
-	.darkBtn {
-		grid-area: 1 / 5 / 2 / 6;
+		.nav {
+			grid-area: 1 / 1 / 2 / 2;
+		}
+
+		.darkBtn {
+			grid-area: 2 / 1 / 3 / 2;
+		}
 	}
 
 	button {
@@ -112,6 +138,10 @@
 	:global(body.dark-mode) button {
 		background-color: #1a1a1a;
 		color: white;
+	}
+
+	ul {
+		margin: 1em;
 	}
 
 	ul#navbar li {
