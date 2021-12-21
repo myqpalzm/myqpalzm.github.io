@@ -28,7 +28,7 @@
 
 	$: {
 		clearInterval(clear)
-		clear = setInterval(swap, 2000)
+		clear = setInterval(swap, 1500)
 	}
 </script>
 
@@ -39,7 +39,7 @@
 
 	<div class="container">
 		<div class="item1">
-			<h1>Hello, this is {name}.</h1>
+			<h1>Hello, this is <span>{name}.</span></h1>
 			<h3>He's a 
 				{#key role}
 					<span in:fade>{role}.</span>
@@ -53,6 +53,15 @@
 </main>
 
 <style>
+	span {
+		color: hsl(var(--accent-hue), 86%, 57%);
+	}
+
+	img {
+		width: auto;
+		height: auto;
+	}
+
 	@media (min-width: 641px) {
 
 		.container {
