@@ -2,6 +2,7 @@
 	import { fade } from 'svelte/transition'
 
 	import Fa from 'svelte-fa'
+	import { faAdjust } from '@fortawesome/free-solid-svg-icons'
 	import { faGithub } from '@fortawesome/free-brands-svg-icons'
 	import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 	import { faItchIo } from '@fortawesome/free-brands-svg-icons'
@@ -20,26 +21,33 @@
 
 <main>
 	<ul id="navbar">
-		{#if navCounter === 0}
-			<li><a href="/" on:click|preventDefault={() => (navCounter = 0)}><strong>Home</strong></a></li> |
-		{:else}
-			<li><a href="/" on:click|preventDefault={() => (navCounter = 0)}>Home</a></li> |
-		{/if}
+		<div class="logo">
+			
+		</div>
+		<div class="nav">
+			{#if navCounter === 0}
+				<li><a href="/" on:click|preventDefault={() => (navCounter = 0)}><strong>Home</strong></a></li> |
+			{:else}
+				<li><a href="/" on:click|preventDefault={() => (navCounter = 0)}>Home</a></li> |
+			{/if}
 
-		{#if navCounter === 1}
-			<li><a href="/" on:click|preventDefault={() => (navCounter = 1)}><strong>Projects</strong></a></li> |
-		{:else}
-		<li><a href="/" on:click|preventDefault={() => (navCounter = 1)}>Projects</a></li> |
-		{/if}
+			{#if navCounter === 1}
+				<li><a href="/" on:click|preventDefault={() => (navCounter = 1)}><strong>Projects</strong></a></li> |
+			{:else}
+				<li><a href="/" on:click|preventDefault={() => (navCounter = 1)}>Projects</a></li> |
+			{/if}
 
-		{#if navCounter === 2}
-			<li><a href="/" on:click|preventDefault={() => (navCounter = 2)}><strong>About</strong></a></li>
-		{:else}
-		<li><a href="/" on:click|preventDefault={() => (navCounter = 2)}>About</a></li>
-		{/if}
-		<button on:click={toggle}>
-			Dark Mode
-		</button>
+			{#if navCounter === 2}
+				<li><a href="/" on:click|preventDefault={() => (navCounter = 2)}><strong>About</strong></a></li>
+			{:else}
+				<li><a href="/" on:click|preventDefault={() => (navCounter = 2)}>About</a></li>
+			{/if}
+		</div>
+		<div class="darkBtn">
+			<button on:click={toggle}>
+				<Fa icon={faAdjust} size="2x"/>
+			</button>
+		</div>
 	</ul>
 
 	{#key navCounter}
@@ -51,7 +59,7 @@
 			<div in:fade><About /></div>
 		{/if}
 	{/key}
-
+	
 	<footer>
 		<a href="https://github.com/myqpalzm" title="Github" target="_blank"><Fa icon={faGithub} size="2x"/></a>
 		<a href="https://www.linkedin.com/in/jonathan-franzeli-b15094114/" title="Linkedin" target="_blank"><Fa icon={faLinkedin} size="2x"/></a>
@@ -73,6 +81,37 @@
 	main {
 		padding: 0 5em;
 		margin: 0 auto;
+	}
+
+	#navbar {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		padding-top: 1em;
+		margin-bottom: 6em;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: 1fr;
+		grid-template-areas:
+			"nav nav nav nav darkBtn";
+		text-align: center;
+	}
+
+	.nav {
+		grid-area: 1 / 1 / 2 / 6;
+	}
+
+	.darkBtn {
+		grid-area: 1 / 5 / 2 / 6;
+	}
+
+	button {
+		margin: 1em;
+		padding: 0.3em 1em 1em 1em;
+	}
+
+	:global(body.dark-mode) button {
+		background-color: #1a1a1a;
+		color: white;
 	}
 
 	ul#navbar li {
