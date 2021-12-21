@@ -2,9 +2,9 @@
     let projectList = [
         {
             id: 1,
-            title: 'SushiPay',
-            desc: 'This is a description.',
-            myRole: 'I designed the logo.',
+            title: 'Sushipay',
+            desc: 'Sushipay is an online restaurant website from a team project. A customer can browse through the available menu and order to their liking.',
+            myRole: 'I designed the website logo and CSS.',
             type: 'Online Restaurant Order',
             link: 'https://sushipay-pemweb.xyz/',
             logo: './image/sushipay.svg',
@@ -12,9 +12,9 @@
         },
         {
             id: 2,
-            title: 'ConsolePay',
-            desc: 'This too is a description',
-            myRole: 'I also designed the logo.',
+            title: 'Consolepay',
+            desc: 'Consolepay is an online gaming console rental website from a team project. A customer can choose from a wide selection of gaming consoles and book a rent for it.',
+            myRole: 'I contributed on the overall design of the website and provided all the image assets.',
             type: 'Online Game Console Rental',
             link: 'http://console.sushipay-pemweb.xyz/',
             logo: './image/consolepay.svg',
@@ -23,8 +23,8 @@
         {
             id: 3,
             title: 'Paycation',
-            desc: 'Hi, I\'m a description.',
-            myRole: 'I designed this logo too.',
+            desc: 'Paycation is an online hotel booking website from a team project. A customer can filter a curated list of hotels and book a hotel of their choosing with ease.',
+            myRole: 'I contributed on the overall design of the website and provided dozens of SVGs with its own variations for each hotels. My "inspiration" for the logo creation is from a certain online ticketing service company.',
             type: 'Online Hotel Booking',
             link: 'http://hotel.sushipay-pemweb.xyz/',
             logo: './image/paycation.svg',
@@ -36,8 +36,8 @@
         {
             id: 1,
             title: 'Hendry Run',
-            desc: 'Hendry Run is a 3D platformer.',
-            myRole: 'This logo too.',
+            desc: 'Hendry Run is a 3D platformer game, made with Unity. The player is tasked with guiding Hendry The Fox to treasure and riches.',
+            myRole: 'I was the lead game programmer and designer of the project. I supervised the level designs and game mechanics to ensure playability.',
             type: '3D Platformer',
             link: 'https://umn.itch.io/hendry-run',
             logo: './image/hendryrun.svg',
@@ -53,8 +53,7 @@
     <div class="container">
         <div class="projectDesc">
             <img src={logo} alt={title}>
-            <br/>
-            <h5><i>{type}</i></h5>
+            <br/><br/>
             <p>{desc}</p>
             <p>{myRole}</p>
             <a href={link} target=”_blank”>Visit website</a>
@@ -71,11 +70,10 @@
     <div class="container">
         <div class="projectDesc">
             <img src={logo} alt={title}>
-            <br/>
-            <h5><i>{type}</i></h5>
+            <br/><br/>
             <p>{desc}</p>
             <p>{myRole}</p>
-            <a href={link} target=”_blank”>Visit website</a>
+            <a href={link} target=”_blank”>Download game</a>
         </div>
         <div class="projectImage">
             <img class="previewImage" src={preview} alt="">
@@ -86,7 +84,13 @@
 
 <style>
     h1 {
-        margin-bottom: 3em;
+        margin-top: 3em;
+        margin-bottom: 2em;
+        text-align: center;
+    }
+
+    p {
+        text-align: justify;
     }
 
     img {
@@ -103,7 +107,7 @@
             display: grid;
             align-items: center;
 			justify-items: left;
-            margin-bottom: 3em;
+            margin-bottom: 6em;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: 1fr;
             grid-template-areas:
@@ -112,6 +116,7 @@
 
         .projectDesc {
             grid-area: 1 / 1 / 2 / 3;
+            margin-right: 4em;
         }
 
         .projectImage {

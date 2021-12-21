@@ -8,9 +8,9 @@
 
 	let words = [
 		'front-end developer',
-		'human',
+		'3D hobbyist',
 		'college student',
-		'B C D'
+		'human, definitely..'
 	]
 
 	let i = 0
@@ -28,7 +28,7 @@
 
 	$: {
 		clearInterval(clear)
-		clear = setInterval(swap, 1000)
+		clear = setInterval(swap, 2000)
 	}
 </script>
 
@@ -39,26 +39,20 @@
 
 	<div class="container">
 		<div class="item1">
-			<h1>Hello, I'm {name}.</h1>
-			<h3>A
+			<h1>Hello, this is {name}.</h1>
+			<h3>He's a 
 				{#key role}
 					<span in:fade>{role}.</span>
 				{/key}
 			</h3>
-			
 		</div>
 		<div class="item2">
 			<img src="https://clarkpaintings.com/wp-content/uploads/2014/12/Pencil_Cat_3.jpg" alt="">
 		</div>
 	</div>
-	
 </main>
 
 <style>
-	h3 {
-		position: absolute;
-	}
-
 	@media (min-width: 641px) {
 
 		.container {

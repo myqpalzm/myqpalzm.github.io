@@ -12,6 +12,10 @@
 	import About from "./About.svelte"
 
 	let navCounter = 0
+
+	function toggle() {
+		window.document.body.classList.toggle('dark-mode')
+	}
 </script>
 
 <main>
@@ -33,6 +37,9 @@
 		{:else}
 		<li><a href="/" on:click|preventDefault={() => (navCounter = 2)}>About</a></li>
 		{/if}
+		<button on:click={toggle}>
+			Dark Mode
+		</button>
 	</ul>
 
 	{#key navCounter}
@@ -54,6 +61,15 @@
 </main>
 
 <style>
+	:global(body) {
+		background-color: #fff;
+		transition: background-color 0.3s
+	}
+	:global(body.dark-mode) {
+		background-color: #1a1a1a;
+		color: #bfc2c7;
+	}
+
 	main {
 		padding: 0 5em;
 		margin: 0 auto;
