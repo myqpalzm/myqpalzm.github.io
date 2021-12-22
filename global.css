@@ -471,3 +471,12 @@ there.
 /* Larger than tablet */
 @media (min-width: 1200px) {}
 
+/* Custom CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+html {
+    overflow: -webkit-scrollbar-vertical; 
+    -ms-overflow-y: scroll; /* For IE */
+    overflow-y: scroll; /* For others & old IE */
+}
