@@ -10,7 +10,7 @@
 		'front-end developer',
 		'3D hobbyist',
 		'college student',
-		'human, definitely..'
+		'game developer'
 	]
 
 	let i = 0
@@ -46,9 +46,9 @@
 				{/key}
 			</h3>
 		</div>
-		<div class="item2">
+		<!-- <div class="item2">
 			<img src="https://clarkpaintings.com/wp-content/uploads/2014/12/Pencil_Cat_3.jpg" alt="">
-		</div>
+		</div> -->
 	</div>
 </main>
 
@@ -75,19 +75,19 @@
 		}
 
 		.item1 {
-			grid-area: 1 / 1 / 2 / 4;
+			grid-area: 1 / 1 / 2 / 5;
 		}
 
-		.item2 {
+		/* .item2 {
 			grid-area: 1 / 4 / 2 / 5;
-		}
+		} */
 	}
 
 	@media (min-width: 0px) and (max-width: 640px) {
 		.container {
 			display: grid;
 			grid-template-columns: repeat(1, 1fr);
-			grid-template-rows: repeat(5, 1fr);
+			grid-template-rows: 1fr;
 			grid-template-areas:
 				"item1"
 				"item2";
