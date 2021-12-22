@@ -151,6 +151,7 @@
 
 	#topBtn {
 		padding: 0 1em;
+		border-color: hsl(var(--accent-hue), 86%, 57%);
 	}
 
 	:global(body.dark-mode) button {
