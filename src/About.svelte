@@ -30,6 +30,12 @@
         .container {
             margin: 0 0em;
         }
+
+        p {
+            text-align: justify;
+            text-justify: distribute;
+            text-align-last: left;
+        }
     }
     
 </style>
