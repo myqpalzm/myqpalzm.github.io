@@ -86,6 +86,8 @@
 	@media (min-width: 0px) and (max-width: 640px) {
 		.container {
 			display: grid;
+			align-items: center;
+			justify-items: center;
 			grid-template-columns: repeat(1, 1fr);
 			grid-template-rows: 1fr;
 			grid-template-areas:

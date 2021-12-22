@@ -194,19 +194,23 @@
             align-items: center;
 			justify-items: left;
             margin-bottom: 3em;
-			grid-template-columns: repeat(1, 1fr);
-			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(4, 1fr);
 			grid-template-areas:
 				"projectDesc"
+                "projectDesc"
+                "projectDesc"
 				"projectImage";
 		}
 
 		.projectDesc {
-			grid-area: 1 / 1 / 2 / 2;
+			grid-area: 1 / 1 / 4 / 2;
 		}
 
 		.projectImage {
-			grid-area: 2 / 1 / 2 / 3;
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+			grid-area: 4 / 1 / 5 / 2;
 		}
 	}
     
