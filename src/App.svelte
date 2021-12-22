@@ -61,10 +61,20 @@
 	{/key}
 	
 	<footer>
-		<a href="https://github.com/myqpalzm" title="Github" target="_blank"><Fa icon={faGithub} size="2x"/></a>
-		<a href="https://www.linkedin.com/in/jonathan-franzeli-b15094114/" title="Linkedin" target="_blank"><Fa icon={faLinkedin} size="2x"/></a>
-		<a href="https://myqpalzm.itch.io/" title="Itch.io" target="_blank"><Fa icon={faItchIo} size="2x"/></a>
-		<a href="mailto:jonathan.franzeli@student.umn.ac.id" title="Email"><Fa icon={faEnvelopeOpenText} size="1.9x"/></a>
+		{#if navCounter === 1}
+			<div class="item2">
+				<button id="topBtn" on:click={ () => window.scrollTo(0,0) }>
+					Back to Top
+				</button>
+			</div>
+		{/if}
+		<br/>
+		<div class="item1">
+			<a href="https://github.com/myqpalzm" title="Github" target="_blank"><Fa icon={faGithub} size="2x"/></a>
+			<a href="https://www.linkedin.com/in/jonathan-franzeli-b15094114/" title="Linkedin" target="_blank"><Fa icon={faLinkedin} size="2x"/></a>
+			<a href="https://myqpalzm.itch.io/" title="Itch.io" target="_blank"><Fa icon={faItchIo} size="2x"/></a>
+			<a href="mailto:jonathan.franzeli@student.umn.ac.id" title="Email"><Fa icon={faEnvelopeOpenText} size="1.9x"/></a>
+		</div>
 	</footer>
 </main>
 
@@ -139,6 +149,10 @@
 		padding: 0.3em 1em 1em 1em;
 	}
 
+	#topBtn {
+		padding: 0 1em;
+	}
+
 	:global(body.dark-mode) button {
 		background-color: #1a1a1a;
 		color: white;
@@ -156,6 +170,18 @@
 		margin: 5em 0;
 		text-align: center;
 		border: none;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: 1fr;
+		grid-template-areas:
+			"item1 item1 item1 item1 item1 item1 item1 item2";
+	}
+
+	.item1 {
+		grid-area: 1 / 1 / 2 / 9;
+	}
+
+	.item2 {
+		grid-area: 1 / 8 / 2 / 9;
 	}
 
 	footer a {
