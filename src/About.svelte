@@ -12,8 +12,8 @@
 </main>
 
 <style>
-    p {
-        text-align: justify;
+    ::-webkit-scrollbar {
+        overflow: scroll;
     }
 
     @media (min-width: 641px) {

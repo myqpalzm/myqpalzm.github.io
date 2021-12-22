@@ -57,10 +57,10 @@
 		color: hsl(var(--accent-hue), 86%, 57%);
 	}
 
-	img {
+	/* img {
 		width: auto;
 		height: auto;
-	}
+	} */
 
 	@media (min-width: 641px) {
 
@@ -97,8 +97,8 @@
 			grid-area: 1 / 1 / 2 / 2;
 		}
 
-		.item2 {
+		/* .item2 {
 			grid-area: 2 / 1 / 2 / 3;
-		}
+		} */
 	}
 </style>

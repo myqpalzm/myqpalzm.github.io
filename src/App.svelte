@@ -78,6 +78,10 @@
 		color: #bfc2c7;
 	}
 
+	*::-webkit-scrollbar {
+		position: absolute;
+	}
+
 	main {
 		padding: 0 5em;
 		margin: 0 auto;
