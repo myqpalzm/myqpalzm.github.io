@@ -87,7 +87,7 @@
 </script>
 
 <main>
-    <h1>Front-End Projects:</h1>
+    <h1>Front-end Projects:</h1>
 
     
 
