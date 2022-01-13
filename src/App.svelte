@@ -6,6 +6,8 @@
 	import { faGithub } from '@fortawesome/free-brands-svg-icons'
 	import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 	import { faItchIo } from '@fortawesome/free-brands-svg-icons'
+	import { faArtstation } from '@fortawesome/free-brands-svg-icons'
+	import { faSoundcloud } from '@fortawesome/free-brands-svg-icons'
 	import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons'
 
 	import Home from "./Home.svelte"
@@ -73,6 +75,8 @@
 			<a href="https://github.com/myqpalzm" title="Github" target="_blank"><Fa icon={faGithub} size="2x"/></a>
 			<a href="https://www.linkedin.com/in/jonathan-franzeli-b15094114/" title="Linkedin" target="_blank"><Fa icon={faLinkedin} size="2x"/></a>
 			<a href="https://myqpalzm.itch.io/" title="Itch.io" target="_blank"><Fa icon={faItchIo} size="2x"/></a>
+			<a href="https://jonathan-franzeli.artstation.com/" title="ArtStation" target="_blank"><Fa icon={faArtstation} size="2x"/></a>
+			<a href="https://soundcloud.com/jonathan-franzeli" title="Soundcloud" target="_blank"><Fa icon={faSoundcloud} size="2x"/></a>
 			<a href="mailto:jonathan.franzeli@student.umn.ac.id" title="Email"><Fa icon={faEnvelopeOpenText} size="1.9x"/></a>
 		</div>
 	</footer>

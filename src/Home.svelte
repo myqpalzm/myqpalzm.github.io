@@ -63,7 +63,6 @@
 	} */
 
 	@media (min-width: 641px) {
-
 		.container {
 			display: grid;
 			align-items: center;
